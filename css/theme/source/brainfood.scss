@@ -42,30 +42,32 @@ section.has-light-background {
 @import "../template/theme";
 // ---------------------------------------------
 
-.reveal section img {
-  background: transparent;
-  border: none;
-  box-shadow: none;
+.reveal section {
+  img {
+    background: transparent;
+    border: none;
+    box-shadow: none;
 
-  &.choco,
-  &.check {
-    margin: 0;
+    &.choco,
+    &.check {
+      margin: 0;
+    }
+
+    &.choco {
+      position: relative;
+      top: -250px;
+      left: -250px;
+      transform: rotate(-10deg) scale(0.5);
+    }
+
+    &.check {
+      width: 36px;
+      margin-left: 24px;
+    }
   }
 
-  &.choco {
-    position: relative;
-    top: -250px;
-    left: -250px;
-    transform: rotate(-10deg) scale(0.5);
+  .blue {
+    color: #1b91ff;
   }
-
-  &.check {
-    width: 36px;
-    margin-left: 24px;
-  }
-}
-
-#framework .intro h1 span {
-  color: #1b91ff;
 }
 

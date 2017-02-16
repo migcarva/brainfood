@@ -46,6 +46,10 @@
             <section>
                 <h1>Homebrew</h1>
                 <img src="img/homebrew.png" alt="">
+
+                <aside class="notes">
+                    <p>this is like apt-get or yum, but for mac</p>
+                </aside>
             </section>
 
             <section data-background="img/beer.jpg"></section>
@@ -58,8 +62,17 @@
                 <p>it installs the stuff you need that Apple didn’t.</p>
 
                 <pre><code class="hljs" data-trim contenteditable>
+                    $ brew search wget
+                </code></pre>
+
+                <pre><code class="hljs" data-trim contenteditable>
                     $ brew install wget
                 </code></pre>
+
+                <aside class="notes">
+                    <p>list all available packages</p>
+                    <p>$ brew search | less</p>
+                </aside>
             </section>
 
             <section>
@@ -68,6 +81,16 @@
                 <pre><code class="hljs" data-trim contenteditable>
                     $ brew update
                 </code></pre>
+
+                <pre><code class="hljs" data-trim contenteditable>
+                    $ brew upgrade
+                </code></pre>
+
+                <aside class="notes">
+                    <p>update: update the formulae and Homebrew itself</p>
+                    <p>upgrade: upgrades everything</p>
+                    <p>brew cleanup + brew doctor</p>
+                </aside>
             </section>
 
             <section>
@@ -77,6 +100,10 @@
             <section>
                 <h2>+ brew cask</h2>
                 <small><a href="https://caskroom.github.io/">caskroom.github.io/</a></small>
+
+                <aside class="notes">
+                    <p>cask is the same concept of brew, but for desktop apps/software</p>
+                </aside>
             </section>
 
             <section>
@@ -95,12 +122,20 @@
                 <pre class="fragment"><code class="hljs" data-trim contenteditable>
                     $ brew cask install google-chrome
                 </code></pre>
+
+                <aside class="notes">
+                    <p>There's currently 3554 casks available for download</p>
+                </aside>
             </section>
 
             <section data-background="img/bsod.png"></section>
 
             <section>
                 <img class="choco" src="img/chocolatey.svg" alt="">
+
+                <aside class="notes">
+                    <p>Chocolatey is the brew for windows!</p>
+                </aside>
             </section>
 
             <section>
@@ -111,10 +146,19 @@
                 <pre class="fragment"><code class="hljs" data-trim contenteditable>
                     c:\> choco install docker
                 </code></pre>
+
+                <aside class="notes">
+                    <p>4657 packages available!</p>
+                </aside>
             </section>
 
             <section>
                 <a href="https://chocolatey.org/">https://chocolatey.org/</a>
+
+                <aside class="notes">
+                    <p>So, this is great for automation.</p>
+                </aside>
+
             </section>
 
         </section>
@@ -124,6 +168,10 @@
             <section>
                 <!--<h1>dotfiles</h1>-->
                 <img src="img/dotfiles.png" alt="">
+
+                <aside class="notes">
+                    <p>Dotfiles is all about automating your setup process</p>
+                </aside>
             </section>
 
             <section>
@@ -132,6 +180,12 @@
                     <li>tweak if needed</li>
                     <li>run script</li>
                 </ul>
+
+                <aside class="notes">
+                    <p>fork a repo with your (or others) dotfiles</p>
+                    <p>tweak them for more customization options, or to add personal or confidential details (like passwords, ssh..)</p>
+                    <p>depending on the dotfiles, some have shell scripts to automate the process</p>
+                </aside>
             </section>
 
             <section>
@@ -139,6 +193,11 @@
                 <pre><code class="hljs" data-trim contenteditable>
                     bash -c "$(curl -LsS https://raw.github.com/.../setup.sh)"
                 </code></pre>
+
+                <aside class="notes">
+                    <p>Mines are a fork of Alrra's dotfiles with some tweaking and personal options, like which programs to install, which macOS settings to set, etc...</p>
+                    <p>I only need to run this command and I can go grab a coffee...</p>
+                </aside>
             </section>
 
             <section>
@@ -157,32 +216,60 @@
                 <img class="terminal"
                      src="https://cloud.githubusercontent.com/assets/1223565/19314446/cd89a592-90a2-11e6-948d-9d75247088ba.gif"
                      alt="">
+
+                <aside class="notes">
+                    <p>this is what happens!</p>
+                </aside>
             </section>
 
             <section>
                 <p>this works both for windows, linux and mac</p>
+
+                <aside class="notes">
+                    <p>Although you need separate repos for each OS</p>
+                </aside>
             </section>
 
             <section>
                 <a href="https://github.com/alrra/dotfiles">just fork them!</a>
                 <p>or learn more:</p>
                 <a href="https://dotfiles.github.io/">dotfiles.github.io/</a>
+
+                <aside class="notes">
+                    <p>Search the web for dotfiles, see what other are doing and create or own</p>
+                </aside>
             </section>
 
         </section>
 
         <section id="editors">
-            <section data-background="img/editors.png"></section>
-            <section data-background="img/themes.png"></section>
+            <section data-background="img/editors.png">
+                <aside class="notes">
+                    <p>Everyone should have freedom of choice</p>
+                </aside>
+            </section>
+            <section data-background="img/themes.png">
+                <aside class="notes">
+                    <p>And should tweak it's editor as they like</p>
+                </aside>
+            </section>
             <section>
                 <h2>share your editor configs</h2>
+
+                <aside class="notes">
+                    <p>But if everyone use a different configuration (spacing, indentation, etc...) this can be a problem</p>
+                </aside>
             </section>
             <section>
                 <p><q>"...I have no time for that!"</q></p>
             </section>
             <section>
-                <p>hopefully we now have <a href="">dotfiles</a> and we only have to share them once!</p>
+                <p>hopefully we now have <a href="https://bitbucket.org/eae-team/dotfiles">dotfiles</a> and we only have to share them once!</p>
                 <p class="fragment">this for <u>all</u> editors and stuff!</p>
+
+                <aside class="notes">
+                    <p>Everyone can contribute to this repo with their specific editor settings</p>
+                </aside>
             </section>
             <section>
                 <h3>what configs should we share?</h3>
@@ -192,6 +279,11 @@
                     <li class="fragment">language specific settings</li>
                     <li class="fragment">whatever we realise makes sense!</li>
                 </ul>
+
+                <aside class="notes">
+                    <p>Not everything need to be shared, just the conflicting settings</p>
+                    <p>Although, for a faster setup, just cloning someone else's settings can be a awesome thing</p>
+                </aside>
             </section>
         </section>
 
@@ -230,6 +322,11 @@
 
             <section>
                 <img src="img/git.png" alt="">
+
+                <aside class="notes">
+                    <p>How many times should I commit? per feature? per task ticket?</p>
+                    <p>How should be the commit message struture?</p>
+                </aside>
             </section>
 
             <section>
@@ -248,6 +345,10 @@
 		290.168,130.302 290.916,121.932 292.611,103.054 293.502,93.063 	"/>
 </g>
 </svg>
+
+                <aside class="notes">
+                    <p>Html5? html4? "divities"? "classities"?</p>
+                </aside>
             </section>
 
             <section>
@@ -268,21 +369,89 @@
 		159.404,204.068 158.658,195.699 156.96,176.821 156.07,166.83 	"/>
 </g>
 </svg>
+
+                <aside class="notes">
+                    <p>Css is a special beats on it's own.</p>
+                    <p>spacing, comments, selector size...</p>
+                </aside>
             </section>
 
             <section>
                 <img src="img/js.png" alt="">
+
+                <aside class="notes">
+                    <p>Javascript... do and dont's. Jquery? pure functions? object oriented javascript?</p>
+                </aside>
             </section>
 
             <section>
                 <img src="img/php.png" alt="">
+
+                <aside class="notes">
+                    <p>php conventions? code styling?</p>
+                </aside>
             </section>
         </section>
 
         <section id="framework">
             <section class="intro" data-background="img/framework.jpg">
-                <h1><span class="fragment">eae </span>frameworks</h1>
+                <h1><span class="fragment blue">eae </span>frameworks</h1>
             </section>
+
+            <section>
+                <img src="img/base_cms.png" alt="">
+
+                <aside class="notes">
+                    <p>static pages, wordpress, laravel...</p>
+                    <p>a basic framework we can fork for faster project setup</p>
+                    <p>Also, for new members, it's a way to introduce them to the way we work, and they can study our framework on their first days</p>
+                </aside>
+            </section>
+        </section>
+
+        <section id="humans">
+            <section data-background="img/people.jpg">
+                <h1 class="fragment">but there's also an human side to this</h1>
+            </section>
+
+            <section>
+                <h2>Some ideas for a faster integration</h2>
+            </section>
+
+            <section data-background="img/lunch.gif">
+                <h2 class="fragment">go lunch with the new member</h2>
+            </section>
+
+            <section data-background="img/roulette2.gif">
+                <h2 class="fragment">...or maybe a lunch roulette?</h2>
+            </section>
+
+            <section data-background="img/liar.gif">
+                <h2 class="fragment blue">2 truths and a lie game</h2>
+            </section>
+
+            <section data-background="img/alone.gif">
+                <h2>don't let them be forever alone...</h2>
+                <h2 class="fragment"> ...add them to slack and stuff!</h2>
+            </section>
+
+            <section data-background="img/rui.gif">
+                <h3>if all the above fails</h3>
+                <h2 class="fragment blue">ask Rui for great ideas</h2>
+            </section>
+
+            <section>
+                <h2>but most important!</h2>
+            </section>
+
+            <section data-background="img/kitchen.gif">
+                <h2>don't tell them about fridays</h2>
+            </section>
+
+        </section>
+
+        <section>
+            <h2>now go eat...</h2>
         </section>
     </div>
 </div>
