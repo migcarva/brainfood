@@ -1,50 +1,316 @@
 <!doctype html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+    <title>Brainfood for Breakfast - by Miguel Carvalho</title>
 
-		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/black.css">
+    <link rel="stylesheet" href="css/reveal.css">
+    <!--<link rel="stylesheet" href="css/theme/black.css">-->
+    <!--<link rel="stylesheet" href="css/theme/serif.css">-->
+    <link rel="stylesheet" href="css/theme/brainfood.css">
 
-		<!-- Theme used for syntax highlighting of code -->
-		<link rel="stylesheet" href="lib/css/zenburn.css">
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="lib/css/zenburn.css">
 
-		<!-- Printing and PDF exports -->
-		<script>
-			var link = document.createElement( 'link' );
-			link.rel = 'stylesheet';
-			link.type = 'text/css';
-			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
-			document.getElementsByTagName( 'head' )[0].appendChild( link );
-		</script>
-	</head>
-	<body>
-		<div class="reveal">
-			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
-			</div>
-		</div>
+    <!-- Printing and PDF exports -->
+    <script>
+        var link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+        document.getElementsByTagName('head')[0].appendChild(link);
+    </script>
+</head>
+<body>
+<div class="reveal">
+    <div class="slides">
 
-		<script src="lib/js/head.min.js"></script>
-		<script src="js/reveal.js"></script>
+        <section>
+            <h2>Brainfood for Breakfast</h2>
+        </section>
 
-		<script>
-			// More info https://github.com/hakimel/reveal.js#configuration
-			Reveal.initialize({
-				history: true,
+        <section id="title">
+            <h1>Welcome!</h1>
+            <h3>New Employee Orientation & Onboarding Suggestions</h3>
+        </section>
 
-				// More info https://github.com/hakimel/reveal.js#dependencies
-				dependencies: [
-					{ src: 'plugin/markdown/marked.js' },
-					{ src: 'plugin/markdown/markdown.js' },
-					{ src: 'plugin/notes/notes.js', async: true },
-					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
-				]
-			});
-		</script>
-	</body>
+        <section id="intro">
+            <section data-background="img/arq.jpg"></section>
+            <section data-background="img/paperwork.jpg"></section>
+            <section data-background="img/eae_merch.jpg"></section>
+        </section>
+
+        <section id="brew">
+            <section>
+                <h1>Homebrew</h1>
+                <img src="img/homebrew.png" alt="">
+            </section>
+
+            <section data-background="img/beer.jpg"></section>
+
+            <section>
+                <h3>but... what does homebrew do?</h3>
+            </section>
+
+            <section>
+                <p>it installs the stuff you need that Apple didn’t.</p>
+
+                <pre><code class="hljs" data-trim contenteditable>
+                    $ brew install wget
+                </code></pre>
+            </section>
+
+            <section>
+                <p>and can update them for you!</p>
+
+                <pre><code class="hljs" data-trim contenteditable>
+                    $ brew update
+                </code></pre>
+            </section>
+
+            <section>
+                <a href="https://brew.sh/">https://brew.sh/</a>
+            </section>
+
+            <section>
+                <h2>+ brew cask</h2>
+                <small><a href="https://caskroom.github.io/">caskroom.github.io/</a></small>
+            </section>
+
+            <section>
+                <p><q>“To install, drag this icon…”</q> no more!</p>
+            </section>
+
+            <section>
+                <pre><code class="hljs" data-trim contenteditable>
+                    $ brew tap caskroom/cask
+                </code></pre>
+
+                <pre class="fragment"><code class="hljs" data-trim contenteditable>
+                    $ brew cask search google-chrome
+                </code></pre>
+
+                <pre class="fragment"><code class="hljs" data-trim contenteditable>
+                    $ brew cask install google-chrome
+                </code></pre>
+            </section>
+
+            <section data-background="img/bsod.png"></section>
+
+            <section>
+                <img class="choco" src="img/chocolatey.svg" alt="">
+            </section>
+
+            <section>
+                <pre><code class="hljs" data-trim contenteditable>
+                    c:\> choco search docker
+                </code></pre>
+
+                <pre class="fragment"><code class="hljs" data-trim contenteditable>
+                    c:\> choco install docker
+                </code></pre>
+            </section>
+
+            <section>
+                <a href="https://chocolatey.org/">https://chocolatey.org/</a>
+            </section>
+
+        </section>
+
+        <section id="dotfiles">
+
+            <section>
+                <!--<h1>dotfiles</h1>-->
+                <img src="img/dotfiles.png" alt="">
+            </section>
+
+            <section>
+                <ul>
+                    <li>clone / fork repo</li>
+                    <li>tweak if needed</li>
+                    <li>run script</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>My current setup</h2>
+                <pre><code class="hljs" data-trim contenteditable>
+                    bash -c "$(curl -LsS https://raw.github.com/.../setup.sh)"
+                </code></pre>
+            </section>
+
+            <section>
+                <h3>The setup process will:</h3>
+                <ul>
+                    <li class="fragment">Download the dotfiles on your computer</li>
+                    <li class="fragment">Create some additional directories</li>
+                    <li class="fragment">Symlink the git, shell, and vim files</li>
+                    <li class="fragment">Install applications / command-line tools</li>
+                    <li class="fragment">Set custom preferences</li>
+                    <li class="fragment">Install vim plugins</li>
+                </ul>
+            </section>
+
+            <section>
+                <img class="terminal"
+                     src="https://cloud.githubusercontent.com/assets/1223565/19314446/cd89a592-90a2-11e6-948d-9d75247088ba.gif"
+                     alt="">
+            </section>
+
+            <section>
+                <p>this works both for windows, linux and mac</p>
+            </section>
+
+            <section>
+                <a href="https://github.com/alrra/dotfiles">just fork them!</a>
+                <p>or learn more:</p>
+                <a href="https://dotfiles.github.io/">dotfiles.github.io/</a>
+            </section>
+
+        </section>
+
+        <section id="editors">
+            <section data-background="img/editors.png"></section>
+            <section data-background="img/themes.png"></section>
+            <section>
+                <h2>share your editor configs</h2>
+            </section>
+            <section>
+                <p><q>"...I have no time for that!"</q></p>
+            </section>
+            <section>
+                <p>hopefully we now have <a href="">dotfiles</a> and we only have to share them once!</p>
+                <p class="fragment">this for <u>all</u> editors and stuff!</p>
+            </section>
+            <section>
+                <h3>what configs should we share?</h3>
+                <ul>
+                    <li class="fragment">spacing settings</li>
+                    <li class="fragment">auto indentation settings</li>
+                    <li class="fragment">language specific settings</li>
+                    <li class="fragment">whatever we realise makes sense!</li>
+                </ul>
+            </section>
+        </section>
+
+        <section id="styleguide">
+            <section>
+                <h1>styleguide and coding conventions</h1>
+            </section>
+
+            <section data-background="https://media.giphy.com/media/3o85xn8wfqzitYg59u/giphy.gif">
+                <h1 class="fragment"><s>visual styleguide</s></h1>
+            </section>
+
+            <section>
+                <h3>This is good for us if we:</h3>
+                <ul>
+                    <li class="fragment">have developers of differing abilities and specialisms<img
+                            class="check fragment" src="img/check.png" alt=""></li>
+                    <li class="fragment">have a number of different developers working on a product at any given
+                        time<img class="check fragment" src="img/check.png" alt=""></li>
+                    <li class="fragment">on-board new staff regularly<img class="check fragment"
+                                                                          src="img/check.png" alt=""></li>
+                    <li class="fragment">have a number of codebases that developers dip in and out of<img
+                            class="check fragment" src="img/check.png" alt=""></li>
+                </ul>
+            </section>
+
+            <section>
+                <h3>A good styleguide, when well followed, will:</h3>
+                <ul>
+                    <li>set the standard for code quality across a codebase</li>
+                    <li>promote consistency across codebases</li>
+                    <li>give developers a feeling of familiarity across codebases</li>
+                    <li>increase productivity</li>
+                </ul>
+            </section>
+
+            <section>
+                <img src="img/git.png" alt="">
+            </section>
+
+            <section>
+                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="400px" height="400px" viewBox="0 0 400 400" enable-background="new 0 0 400 400" xml:space="preserve">
+<g>
+	<polygon fill="#E45126" points="78.695,334.619 51.625,31 349.075,31 321.978,334.57 200.168,368.34 	"/>
+	<polygon fill="#F1682B" points="200.351,342.529 298.777,315.24 321.936,55.825 200.351,55.825 	"/>
+	<polygon fill="#EBEBEB" points="200.351,168.434 151.076,168.434 147.671,130.302 200.351,130.302 200.351,93.063 200.222,93.063
+		106.976,93.063 107.868,103.054 117.02,205.67 200.351,205.67 	"/>
+	<polygon fill="#EBEBEB" points="200.351,265.143 200.188,265.188 158.715,253.988 156.063,224.291 135.913,224.291
+		118.684,224.291 123.9,282.758 200.179,303.934 200.351,303.887 	"/>
+	<polygon fill="#FFFFFF" points="200.222,168.434 200.222,205.67 246.076,205.67 241.754,253.963 200.222,265.174 200.222,303.916
+		276.562,282.758 277.121,276.469 285.871,178.433 286.779,168.434 276.746,168.434 	"/>
+	<polygon fill="#FFFFFF" points="200.222,93.063 200.222,116.191 200.222,130.21 200.222,130.302 290.049,130.302 290.049,130.302
+		290.168,130.302 290.916,121.932 292.611,103.054 293.502,93.063 	"/>
+</g>
+</svg>
+            </section>
+
+            <section>
+                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="400px" height="400px" viewBox="0 0 400 400" enable-background="new 0 0 400 400" xml:space="preserve">
+<g>
+	<polygon fill="#1673B6" points="78.696,335.62 51.625,32 349.076,32 321.979,335.571 200.168,369.341 "/>
+	<polygon fill="#35A9DB" points="200.352,343.529 298.779,316.241 321.936,56.826 200.352,56.826 "/>
+	<polygon fill="#FFFFFF" points="200.351,166.826 249.627,166.826 253.029,128.694 200.351,128.694 200.351,91.455 200.48,91.455
+		293.727,91.455 292.834,101.446 283.682,204.062 200.351,204.062 	"/>
+	<polygon fill="#EBEBEB" points="200.574,263.534 200.412,263.58 158.939,252.381 156.288,222.684 136.136,222.684 118.908,222.684
+		124.125,281.15 200.402,302.326 200.574,302.278 	"/>
+	<polygon fill="#FFFFFF" points="246.461,202.486 241.977,252.355 200.445,263.566 200.445,302.308 276.785,281.15 277.344,274.859
+		283.822,202.486 	"/>
+	<polygon fill="#EBEBEB" points="200.48,91.455 200.48,114.583 200.48,128.602 200.48,128.694 110.652,128.694 110.652,128.694
+		110.533,128.694 109.787,120.324 108.089,101.446 107.199,91.455 	"/>
+	<polygon fill="#EBEBEB" points="200.351,166.83 200.351,189.959 200.351,203.977 200.351,204.068 159.523,204.068 159.523,204.068
+		159.404,204.068 158.658,195.699 156.96,176.821 156.07,166.83 	"/>
+</g>
+</svg>
+            </section>
+
+            <section>
+                <img src="img/js.png" alt="">
+            </section>
+
+            <section>
+                <img src="img/php.png" alt="">
+            </section>
+        </section>
+
+        <section id="framework">
+            <section class="intro" data-background="img/framework.jpg">
+                <h1><span class="fragment">eae </span>frameworks</h1>
+            </section>
+        </section>
+    </div>
+</div>
+
+<script src="lib/js/head.min.js"></script>
+<script src="js/reveal.js"></script>
+
+<script>
+    // More info https://github.com/hakimel/reveal.js#configuration
+    Reveal.initialize({
+        history: true,
+        hideAddressBar: true,
+        transitionSpeed: 'fast',
+        center: true,
+
+        // More info https://github.com/hakimel/reveal.js#dependencies
+        dependencies: [
+            {src: 'plugin/markdown/marked.js'},
+            {src: 'plugin/markdown/markdown.js'},
+            {src: 'plugin/zoom-js/zoom.js', async: true},
+            {src: 'plugin/notes/notes.js', async: true},
+            {
+                src: 'plugin/highlight/highlight.js', async: true, callback: function () {
+                hljs.initHighlightingOnLoad();
+            }
+            }
+        ]
+    });
+</script>
+</body>
 </html>
